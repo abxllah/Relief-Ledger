@@ -1,0 +1,20 @@
+{
+  "name": "reliefledger",
+  "version": "1.0.0",
+  "description": "One Family. One Record. Transparent Relief.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "reset": "node -e \"require('fs').rmSync('reliefledger.db',{force:true});require('fs').rmSync('reliefledger.db-wal',{force:true});require('fs').rmSync('reliefledger.db-shm',{force:true})\" && node src/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
